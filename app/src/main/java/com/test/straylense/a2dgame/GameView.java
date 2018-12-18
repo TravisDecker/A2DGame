@@ -1,13 +1,10 @@
 package com.test.straylense.a2dgame;
 
 import android.content.Context;
-
-import com.test.straylense.a2dgame.MainThread;
-
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.view.SurfaceView;
 import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
@@ -30,7 +27,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        characterSprite = new CharacterSprite(BitmapFactory.decodeResource(getResources(), R.drawable.ring));
+        characterSprite = new CharacterSprite(BitmapFactory.decodeResource(getResources(), R.drawable.rocketmed));
         thread.setRunning(true);
         thread.start();
     }
